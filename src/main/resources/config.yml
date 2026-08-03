@@ -1,0 +1,70 @@
+# ============================
+#     DayTrades - Config
+# ============================
+
+plugin-name: "&6&lDayTrades"
+
+commands:
+  aliases:
+    - "dt"
+    - "trade"
+
+cooldown:
+  seconds: 10
+  sound:
+    key: "ui.button.click"
+    volume: 1.0
+    pitch: 1.0
+
+gui:
+  title: "&8Trade: &e{player}"
+  rows: 6
+  # Slots del lado izquierdo (tú)
+  your-side-slots: [10,11,12,19,20,21,28,29,30]
+  # Slots del lado derecho (la otra persona)
+  other-side-slots: [14,15,16,23,24,25,32,33,34]
+  # Vidrio separador
+  border:
+    material: "GRAY_STAINED_GLASS_PANE"
+    name: " "
+    slots: [0,1,2,3,4,5,6,7,8,9,17,18,26,27,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53]
+  # Bloque para aceptar (tu lado)
+  accept-button:
+    material: "RED_CONCRETE"
+    material-accepted: "LIME_CONCRETE"
+    slot: 49
+    name: "&c&lAceptar Trade"
+    name-accepted: "&a&l¡Aceptado!"
+  # Botón de cancelar
+  cancel-button:
+    material: "BARRIER"
+    slot: 45
+    name: "&c&lCancelar Trade"
+
+messages:
+  trade-received:
+    title: "{plugin-name}"
+    subtitle: "&#00DAFF¡{player} te ha enviado trade!"
+  trade-accepted:
+    title: "{plugin-name}"
+    subtitle: "&a¡Has aceptado el trade!"
+  trade-rejected:
+    title: "{plugin-name}"
+    subtitle: "&c¡Has rechazado el trade!"
+  trade-cancelled-item-move:
+    title: "{plugin-name}"
+    subtitle: "&cTrade cancelado: moviste un ítem"
+  trade-cancelled-manual:
+    title: "{plugin-name}"
+    subtitle: "&cTrade cancelado por {player}"
+  trade-completed:
+    title: "{plugin-name}"
+    subtitle: "&a¡Trade completado con éxito!"
+
+chat-messages:
+  no-permission: "&cNo tienes permiso para usar este comando."
+  player-not-found: "&cJugador no encontrado."
+  player-not-online: "&cEse jugador no está conectado."
+  trade-request-sent: "&aHas enviado una solicitud de trade a &e{player}&a."
+  trade-already-pending: "&cYa tienes una solicitud de trade pendiente."
+  cooldown-active: "&cDebes esperar {seconds}s antes de repetir esta acción."
