@@ -1,6 +1,5 @@
 package com.bughatti.daytrades.trade;
 
-import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
 import java.util.UUID;
@@ -20,6 +19,8 @@ public class Trade {
 
     private State state = State.PENDING;
     private int countdownTaskId = -1;
+
+    private com.bughatti.daytrades.gui.TradeGUI gui;
 
     public Trade(UUID player1, UUID player2) {
         this.player1 = player1;
@@ -69,4 +70,7 @@ public class Trade {
 
     public int getCountdownTaskId() { return countdownTaskId; }
     public void setCountdownTaskId(int id) { this.countdownTaskId = id; }
-  }
+
+    public com.bughatti.daytrades.gui.TradeGUI getGui() { return gui; }
+    public void setGui(com.bughatti.daytrades.gui.TradeGUI gui) { this.gui = gui; }
+    }
